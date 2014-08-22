@@ -16,6 +16,8 @@ def main(global_config, **settings):
     engine = engine_from_config(settings, 'sqlalchemy.')
     get_root = appmaker(engine)
     config = Configurator(settings=settings, root_factory=get_root)
+    config.include('pyramid_mako')
+    config.include('pyramid_chameleon')
     config.add_static_view('static', 'pyramidapp:static')
     config.add_view('pyramidapp.views.view_root',
                     context='pyramidapp.models.MyApp',
