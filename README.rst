@@ -60,3 +60,9 @@ Monitoring your logs
 ::
 
     rhc-tail-files -a pyramidapp -l your@email.com
+
+
+-------------------------------------------------------------------------------------------------------------------
+now has the mako and chameleon pyramid packages
+added into the setup.py and __init__.py files 
+works off the bat
